@@ -1,8 +1,8 @@
-# Cubing Standards
+# Lucas Garron's Cubing Standards Drafts
 
 Coming some day:
 
-- [SiGN](./SiGN) (draft)
+- Notation: [SiGN / LGN](./notation) (draft)
 - KSolve
   - txt
   - JSON
