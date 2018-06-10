@@ -2,9 +2,11 @@
 
 TODO: Create identifiers to distinguish the SiGN definition for cubes / normal puzzles / other puzzles.
 
-We that simple programs should support reading and writing the **Si**mple **G**eneral **N**otation (SiGN) format, defined at the end of the first section below as `sign-alg`.
+##  Recommendations
 
-Programs wishing to provide "full" algorithm should support the **L**arger **G**eneral **N**otation (LGN) format, defined at the end of the second section below as `lgn-alg`.
+Programs implementing a custom parser who wish to keep it as simple as possible should support reading and writing **Si**mple **G**eneral **N**otation (SiGN), defined at the end of the first section below as `sign-alg`.
+
+Programs wishing to provide "full" algorithm should support **L**arger **G**eneral **N**otation (LGN), defined at the end of the second section below as `lgn-alg`.
 
 ## Definition Syntax
 
@@ -58,19 +60,6 @@ A `repeated-move` is a `base-move` with an optional suffix to indicate repetitio
 
 The prime serves the purpose of a negative sign, indicating repetition of the inverse move. That is, the repetition amount is defined by:
 
-    getAmount(UNIT:repeatable-unit):
-      return 1
-
-    getAmount(UNIT:repeatable-unit AMOUNT:positive-int):
-      return AMOUNT as integer
-
-    getAmount(UNIT:repeatable-unit AMOUNT:positive-int prime):
-      return -AMOUNT as integer
-
-[TODO: Do we need this?] The following must apply to puzzle using SiGN:
-
-- If 1) two consecutive `repeated-move`s have the same `repeatable-move` and `positive-int` and one of them has a `prime` but the other does not, and 2) the sequence of two consecutive units can be applied to a given puzzle state, then the total effect is the same as doing nothing to the puzzle.
-- If 1) two sequences of `repeated-move`s have the same `repeatable-move`, 2) the sequences can both be applied to a given puzzle state, and 3) the sum of `getAmount()` applied to the moves in each sequence has the same sum, then the effect of applying either sequence to the puzzle must be the same as the other.
 
 ## Move Sequence
 
@@ -82,7 +71,7 @@ A `move-sequence` is a sequence of moves written out with spacing between them:
         repeated-move single-space single-spaced-move-sequence
     sign-alg = single-spaced-move-sequence
 
-Every `lgn-alg` can be expanded and normalized to a `sign-alg`. Cubing programs should consider it as the simplest option for processing input from other SiGN-compatible sources, if they are implementing a custom parser and wish to keep it as simple as possible.
+Every `lgn-alg` can be expanded and normalized to a `sign-alg`.
 
 # Algorithms / LGN
 
@@ -92,20 +81,18 @@ A repeatable unit is a unit that can be repeated without being wrapped in a repe
 
     (Definitions of group / commutator / conjugate are below.)
 
-    repeatable-unit =
-        move
-        group
-        commutator
-        conjugate
+    repeatable-unit = move /
+                      group /
+                      commutator /
+                      conjugate
 
 ## Repeated Unit
 
 This is similar to `repeated-move` above. In fact, every `repeated-move` is a valid `repeated-unit`.
 
-    repeated-unit =
-        repeatable-unit
-        repeatable-unit positive-int
-        repeatable-unit positive-int prime
+    repeated-unit = repeatable-unit /
+                    repeatable-unit positive-int /
+                 repeatable-unit positive-int prime
 
 The same requirements as documented for `repeated-move` apply, except with units instead of moves.
 
@@ -113,15 +100,12 @@ The same requirements as documented for `repeated-move` apply, except with units
 
 TODO: document when `white-space` can contain newlines.
 
-    white-space =
-        single-space
-    repeated-white-space =
-        white-space
-        white-space repeated-white-space
+    white-space          = single-space
+    repeated-white-space = white-space /
+                           white-space repeated-white-space
 
-    sequence = 
-        repeated-unit 
-        repeated-unit repeated-white-space move-sequence
+    sequence = repeated-unit /
+               repeated-unit repeated-white-space move-sequence
 
 ## Group
 
