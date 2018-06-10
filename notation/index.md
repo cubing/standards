@@ -2,6 +2,12 @@
 
 **Si**mple **G**eneral **N**otation (SiGN) and **L**arger **G**eneral **N**otation (LGN)
 
+# TODO: Allow naming the SiGN definition for cubes / normal puzzles / other puzzles.
+
+We that simple programs should support reading and writing the `sign-alg` format.
+
+Programs wishing to provide "full" algorithm should support the `lgn-alg` format.
+
 ## Definition Syntax
 
 Definitions below use a variant of Backus-Naur form. Consider this example:
@@ -41,6 +47,8 @@ TODO:
 - SiGNw
 - Should we disallow `1r`?
 
+# Algorithms / LGN
+
 ## Repeated Move
 
 A `repeated-move` is a `base-move` with an optional suffix to indicate repetition.
@@ -76,16 +84,9 @@ A `move-sequence` is a sequence of moves written out with spacing between them:
     single-spaced-move-sequence = 
         repeated-move  /
         repeated-move single-space single-spaced-move-sequence
+    sign-alg = single-spaced-move-sequence
 
-    # TODO: Allow tabs and other whitespace?
-    white-space = single-space
-        "\n" /
-        white-space white-space
-    move-sequence = 
-        repeated-move  /
-        repeated-move white-space move-sequence
-
-All SiGN `algorithm`s can be normalized to a `single-spaced-move-sequence`. Cubing programs should consider it as the simplest option for processing input from other SiGN-compatible sources, if they are implementing a custom parser and wish to keep it as simple as possible.
+All `lgn-alg`s can be normalized to a `sign-alg`. Cubing programs should consider it as the simplest option for processing input from other SiGN-compatible sources, if they are implementing a custom parser and wish to keep it as simple as possible.
 
 
 ## Repeatable Unit
@@ -113,14 +114,21 @@ The same requirements as documented for `repeated-move` apply, except with units
 
 # Sequence
 
+    white-space =
+        single-space /
+        "\n"
+    repeated-white-space =
+        white-space
+        white-space repeated-white-space
+
     sequence = 
         repeated-unit 
-        repeated-unit white-space move-sequence
+        repeated-unit repeated-white-space move-sequence
 
 ## Group
 
-    white-space-or-empty = "" / white-space
-    embedded-sequence = white-space-or-empty sequence white-space-or-empty
+    flexible-white-space = "" / repeated-white-space
+    embedded-sequence = flexible-white-space sequence flexible-white-space
     group = "(" embedded-sequence ")"
 
 The following identities hold:
@@ -140,9 +148,9 @@ The following identities hold:
 
 ## Algorithm
 
-`algorithm` is another name for `sequence`.
+A general LGN algorithm is anything that is a valid `sequence`.
 
-    algorithm = sequence
+    lgn-alg = sequence
 
 # Extensions
 
