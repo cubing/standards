@@ -1,6 +1,6 @@
 # Notation: SiGN and LGN (DRAFT)
 
-**Si**mple **G**eneral **N**otation (SiGN) and Larger General Notation (LGN)
+**Si**mple **G**eneral **N**otation (SiGN) and **L**arger **G**eneral **N**otation (LGN)
 
 ## Definition Syntax
 
@@ -8,12 +8,9 @@ Definitions below use a variant of Backus-Naur form. Consider this example:
 
     foo = "A"
     bar = "1"
-    baz =
-        "C"
-        "-D"
-    thing =
-        foo bar
-        foo baz
+    baz = "C" / "-D"
+    thing = foo bar /
+            foo baz
 
 Then the valid values for `thing` are `A1`, `AC`, or `A-D`. `SiGN` is context-free, and `LGN` has a deterministic parsed tree for every expression.
 
@@ -21,27 +18,38 @@ Then the valid values for `thing` are `A1`, `AC`, or `A-D`. `SiGN` is context-fr
 
 ## Base Move
 
-A base move is a string of alphabetic characters with an optional positive integer prefix. (TODO: can we make this more general without inviting parser bugs?)
+The exact set of base moves depends on the puzzle. For cubes and "normal" twistypuzzles, we define `base-move` to be the following specific definition:
 
-    positive-int =
-        [1-9][0-9]*
+    unsliced-move-name = x / y / z
+    slice-move-name    = U / L / F / R / B / D / M / E / S
+    wide-move-name     = u / l / f / r / b / d / m / e / s
+
+    positive-int = [1-9][0-9]*
+    dash = "-"
 
     base-move =
-        [A-Za-z]+
-        positive-int base-move
+        unsliced-move-name
+        slice-move-name /
+        positive-int slice-move-name /
+        wide-move-name /
+        positive-int wide-move-name /
+        positive-int dash positive-int wide-move-name
 
-The valid set of base moves depends on the puzzle.
+Other puzzles may define variants on this, but they must never contain whitespace or end in a digit.
+
+TODO:
+- SiGNw
+- Should we disallow `1r`?
 
 ## Repeated Move
 
 A `repeated-move` is a `base-move` with an optional suffix to indicate repetition.
 
     # TODO: Is R0 allowed?
-    prime =
-        '
+    prime = "'""
     repeated-unit =
-        base-move
-        base-move positive-int
+        base-move /
+        base-move positive-int /
         base-move positive-int prime
 
 The prime serves the purpose of a negative sign, indicating repetition of the inverse move. That is, the repetition amount is defined by:
@@ -66,19 +74,19 @@ A `move-sequence` is a sequence of moves written out with spacing between them:
 
     single-space = " "
     single-spaced-move-sequence = 
-        repeated-move 
+        repeated-move  /
         repeated-move single-space single-spaced-move-sequence
 
+    # TODO: Allow tabs and other whitespace?
     white-space = single-space
-        "\n"
+        "\n" /
         white-space white-space
     move-sequence = 
-        repeated-move 
+        repeated-move  /
         repeated-move white-space move-sequence
 
 All SiGN `algorithm`s can be normalized to a `single-spaced-move-sequence`. Cubing programs should consider it as the simplest option for processing input from other SiGN-compatible sources, if they are implementing a custom parser and wish to keep it as simple as possible.
 
-# TODO: SiGN Algorithms / LGN
 
 ## Repeatable Unit
 
@@ -111,14 +119,9 @@ The same requirements as documented for `repeated-move` apply, except with units
 
 ## Group
 
-    white-space-or-empty =
-        ""
-        white-space
-
-    embedded-sequence =
-        white-space-or-empty sequence white-space-or-empty
-    group =
-        "(" embedded-sequence ")"
+    white-space-or-empty = "" / white-space
+    embedded-sequence = white-space-or-empty sequence white-space-or-empty
+    group = "(" embedded-sequence ")"
 
 The following identities hold:
 
@@ -127,10 +130,8 @@ The following identities hold:
 
 ## Conjugate and Commutator
 
-    conjugate =
-        "[" embedded-sequence ":" embedded-sequence "]"
-    commutator =
-        "[" embedded-sequence "," embedded-sequence "]"
+    conjugate = "[" embedded-sequence ":" embedded-sequence "]"
+    commutator = "[" embedded-sequence "," embedded-sequence "]"
 
 The following identities hold:
 
@@ -141,8 +142,7 @@ The following identities hold:
 
 `algorithm` is another name for `sequence`.
 
-    algorithm = 
-        sequence
+    algorithm = sequence
 
 # Extensions
 

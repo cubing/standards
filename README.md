@@ -1,4 +1,4 @@
-# Lucas Garron's Cubing Standards Drafts
+# Lucas Garron's Cubing Standards Experimental Drafts
 
 Coming some day:
 
