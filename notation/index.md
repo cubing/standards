@@ -111,9 +111,10 @@ The same requirements as documented for `repeated-move` apply, except with units
 
 ## Sequence
 
+TODO: document when `white-space` can contain newlines.
+
     white-space =
-        single-space /
-        "\n"
+        single-space
     repeated-white-space =
         white-space
         white-space repeated-white-space
