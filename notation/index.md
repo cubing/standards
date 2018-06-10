@@ -1,12 +1,10 @@
 # Notation: SiGN and LGN (DRAFT)
 
-**Si**mple **G**eneral **N**otation (SiGN) and **L**arger **G**eneral **N**otation (LGN)
+TODO: Create identifiers to distinguish the SiGN definition for cubes / normal puzzles / other puzzles.
 
-# TODO: Allow naming the SiGN definition for cubes / normal puzzles / other puzzles.
+We that simple programs should support reading and writing the **Si**mple **G**eneral **N**otation (SiGN) format, defined at the end of the first section below as `sign-alg`.
 
-We that simple programs should support reading and writing the `sign-alg` format.
-
-Programs wishing to provide "full" algorithm should support the `lgn-alg` format.
+Programs wishing to provide "full" algorithm should support the **L**arger **G**eneral **N**otation (LGN) format, defined at the end of the second section below as `lgn-alg`.
 
 ## Definition Syntax
 
@@ -156,3 +154,8 @@ A general LGN algorithm is anything that is a valid `sequence`.
 
 - Comments
 - Timestamps
+
+# Transformation
+
+- Standard serialization
+- Conversion from LGN to SiGN
