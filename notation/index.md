@@ -45,8 +45,6 @@ TODO:
 - SiGNw
 - Should we disallow `1r`?
 
-# Algorithms / LGN
-
 ## Repeated Move
 
 A `repeated-move` is a `base-move` with an optional suffix to indicate repetition.
@@ -84,8 +82,9 @@ A `move-sequence` is a sequence of moves written out with spacing between them:
         repeated-move single-space single-spaced-move-sequence
     sign-alg = single-spaced-move-sequence
 
-All `lgn-alg`s can be normalized to a `sign-alg`. Cubing programs should consider it as the simplest option for processing input from other SiGN-compatible sources, if they are implementing a custom parser and wish to keep it as simple as possible.
+Every `lgn-alg` can be expanded and normalized to a `sign-alg`. Cubing programs should consider it as the simplest option for processing input from other SiGN-compatible sources, if they are implementing a custom parser and wish to keep it as simple as possible.
 
+# Algorithms / LGN
 
 ## Repeatable Unit
 
@@ -110,7 +109,7 @@ This is similar to `repeated-move` above. In fact, every `repeated-move` is a va
 
 The same requirements as documented for `repeated-move` apply, except with units instead of moves.
 
-# Sequence
+## Sequence
 
     white-space =
         single-space /
