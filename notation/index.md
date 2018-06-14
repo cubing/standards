@@ -105,7 +105,7 @@ TODO: document when `white-space` can contain newlines.
                            white-space repeated-white-space
 
     sequence = repeated-unit /
-               repeated-unit repeated-white-space move-sequence
+               repeated-unit repeated-white-space sequence
 
 ## Group
 
