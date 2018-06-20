@@ -3,6 +3,8 @@
 Coming some day:
 
 - Notation: [SiGN / LGN](./notation) (draft)
-- KSolve
+- KPuzzle (based on KSolve)
   - txt
   - JSON
+
+TODO: unique identifier for each standard
