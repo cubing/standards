@@ -34,7 +34,7 @@ The exact set of base moves depends on the puzzle. For cubes and "normal" twisty
     dash = "-"
 
     base-move =
-        unsliced-move-name
+        unsliced-move-name /
         slice-move-name /
         positive-int slice-move-name /
         wide-move-name /
@@ -52,18 +52,17 @@ TODO:
 A `repeated-move` is a `base-move` with an optional suffix to indicate repetition.
 
     # TODO: Is R0 allowed?
-    prime = "'""
+    prime = "'"
     repeated-unit =
         base-move /
         base-move positive-int /
         base-move positive-int prime
 
-The prime serves the purpose of a negative sign, indicating repetition of the inverse move. That is, the repetition amount is defined by:
+The prime serves the purpose of a negative sign, indicating repetition of the inverse move.
 
+## SiGN Alg
 
-## Move Sequence
-
-A `move-sequence` is a sequence of moves written out with spacing between them:
+A `sign-alg` is a sequence of moves written out with spacing between them:
 
     single-space = " "
     single-spaced-move-sequence = 
@@ -81,7 +80,7 @@ A repeatable unit is a unit that can be repeated without being wrapped in a repe
 
     (Definitions of group / commutator / conjugate are below.)
 
-    repeatable-unit = move /
+    repeatable-unit = base-move /
                       group /
                       commutator /
                       conjugate
@@ -92,7 +91,7 @@ This is similar to `repeated-move` above. In fact, every `repeated-move` is a va
 
     repeated-unit = repeatable-unit /
                     repeatable-unit positive-int /
-                 repeatable-unit positive-int prime
+                    repeatable-unit positive-int prime
 
 The same requirements as documented for `repeated-move` apply, except with units instead of moves.
 
