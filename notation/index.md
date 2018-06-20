@@ -18,7 +18,17 @@ Definitions below use a variant of Backus-Naur form. Consider this example:
     thing = foo bar /
             foo baz
 
-Then the valid values for `thing` are `A1`, `AC`, or `A-D`. `SiGN` is context-free, and `LGN` has a deterministic parsed tree for every expression.
+Then the valid values for `thing` are `A1`, `AC`, or `A-D`.
+
+# Design Goals
+
+These standards aim to satisfy these goals:
+
+- Every SiGN alg and LGN alg has a single valid (i.e. deterministic) parse tree.
+- SiGN parsing is [context-free](https://en.wikipedia.org/wiki/Context-free_grammar).
+- Every SiGN alg parse tree has a single valid serialization.
+
+This allows programs to interoperate easily by following the standards in a straightforward way.
 
 # SiGN Move Sequences
 
