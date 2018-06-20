@@ -1,6 +1,6 @@
 # Lucas Garron's Cubing Standards Experimental Drafts
 
-Coming some day:
+Goals:
 
 - Notation: [SiGN / LGN](./notation) (draft)
 - KPuzzle (based on KSolve)
@@ -10,5 +10,3 @@ Coming some day:
   - Full 3x3x3 state
   - 3x3x3 partial permutation/orientation masks.
   - Move constraints?
-
-TODO: unique identifier for each standard
