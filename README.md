@@ -3,6 +3,8 @@
 Goals:
 
 - Notation: [SiGN / LGN](./notation) (draft)
+  - string alg format
+  - JSON representation
 - KPuzzle (based on KSolve)
   - txt
   - JSON
