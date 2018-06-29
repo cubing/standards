@@ -25,7 +25,7 @@ Then the valid values for `thing` are `A1`, `AC`, or `A-D`.
 These standards aim to satisfy these goals:
 
 - Every SiGN alg and LGN alg has a single valid (i.e. deterministic) parse tree.
-- SiGN parsing is [context-free](https://en.wikipedia.org/wiki/Context-free_grammar).
+- SiGN and LGN parsing is [context-free](https://en.wikipedia.org/wiki/Context-free_grammar).
 - Every SiGN alg parse tree has a single valid serialization.
 
 This allows programs to interoperate easily by following the standards in a straightforward way.
