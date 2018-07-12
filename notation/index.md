@@ -63,7 +63,7 @@ A `repeated-move` is a `base-move` with an optional suffix to indicate repetitio
 
     # TODO: Is R0 allowed?
     prime = "'"
-    repeated-unit =
+    repeated-move =
         base-move /
         base-move positive-int /
         base-move positive-int prime
