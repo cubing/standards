@@ -36,15 +36,15 @@ This allows programs to interoperate easily by following the standards in a stra
 
 The exact set of base moves depends on the puzzle. For cubes and "normal" twistypuzzles, we define `base-move` to be the following specific definition:
 
-    unsliced-move-family = x / y / z
-    slice-move-family    = U / L / F / R / B / D / M / E / S
-    wide-move-family     = u / l / f / r / b / d / m / e / s
+    bare-move-family  = x / y / z / m / e / s / M / E / S
+    slice-move-family = U / L / F / R / B / D
+    wide-move-family  = u / l / f / r / b / d / Uw / Lw / Fw / Rw / Bw / Dw
 
     positive-int = [1-9][0-9]*
     dash = "-"
 
     base-move =
-        unsliced-move-family /
+        bare-move-family /
         slice-move-family /
         positive-int slice-move-family /
         wide-move-family /
@@ -113,13 +113,14 @@ TODO: document when `white-space` can contain newlines.
     repeated-white-space = white-space /
                            white-space repeated-white-space
 
-    sequence = repeated-unit /
+    sequence = "" /
+               repeated-unit /
                repeated-unit repeated-white-space sequence
 
 ## Group
 
-    flexible-white-space = "" / repeated-white-space
-    embedded-sequence = flexible-white-space sequence flexible-white-space
+    optional-white-space = "" / repeated-white-space
+    embedded-sequence = optional-white-space sequence optional-white-space
     group = "(" embedded-sequence ")"
 
 The following identities hold:
