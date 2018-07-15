@@ -18,7 +18,7 @@ Definitions below use a variant of Backus-Naur form. Consider this example:
     thing = foo bar /
             foo baz
 
-Then the valid values for `thing` are `A1`, `AC`, or `A-D`.
+Then the valid values for `thing` are `"A1"`, `"AC"`, or `"A-D"`.
 
 # Design Goals
 
