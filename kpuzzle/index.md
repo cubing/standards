@@ -83,6 +83,7 @@ Notes:
 ## TODO
 
 - Definition of composition.
+- Figure out where repeated moves, inverses, and metrics are handled.
 - Features
   - Names: puzzle ID, definition name, definition version(?)
   - Derived variants: different solved state/indistinguishable pieces, ignored orientations/permutations for some orbits.
