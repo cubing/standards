@@ -12,7 +12,7 @@ A `KPuzzle Definition` is a [JSON](https://json.org/) object that specifies a [t
 | Format       | JSON                         | Text                          |
 | Permutations | 0-indexed                    | 1-indexed                     |
 | Orientations | By slot ("post-permutation") | By pieces ("pre-permutation") |
-| Features     | For now: orbits, moves | Orbits, moves, puzzle name, solved state, comments, derived moves (some versions), bandaged pieces (some versions) |
+| Features     | For now: orbits, moves | Orbits, moves, puzzle name, solved state, comments, derived moves (some versions), forbidden pairs/groups (some versions), bandaged pieces (some versions) |
 
 This document currently errs on the side of a limited specification for now, with plans to extend it with more features in the future.
 
