@@ -14,3 +14,5 @@ Goals:
 - Puzzle and event ID names
 - Geometry
   - face names
+
+Feedback and contributions are welcome at [github.com/cubing/standards](https://github.com/cubing/standards)
