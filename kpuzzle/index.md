@@ -19,11 +19,23 @@ This document currently errs on the side of a limited specification for now, wit
 ## Example
 
     {
-      orbits: {"CORNERS": {numPieces: 7, orientations: 3}},
+      orbits: {
+        "EDGE":   {"numPieces": 12, "orientations": 2},
+        "CORNER": {"numPieces": 8,  "orientations": 3},
+        "CENTER": {"numPieces": 6,  "orientations": 4}
+      },
       moves: {
-        "U": {"CORNERS": {"permutation": [3, 0, 1, 2, 4, 5, 6], "orientation": [0, 0, 0, 0, 0, 0, 0]}},
-        "R": {"CORNERS": {"permutation": [0, 2, 5, 3, 1, 4, 6], "orientation": [0, 2, 1, 0, 1, 2, 0]}},
-        "F": {"CORNERS": {"permutation": [0, 1, 3, 6, 4, 2, 5], "orientation": [0, 0, 0, 0, 0, 0, 0]}}
+        "U": {
+          "EDGE":   {"permutation": [3, 0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11], "orientation": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]},
+          "CORNER": {"permutation": [1, 2, 3, 0, 4, 5, 6, 7], "orientation": [0, 0, 0, 0, 0, 0, 0, 0]},
+          "CENTER": {"permutation": [0, 1, 2, 3, 4, 5], "orientation": [1, 0, 0, 0, 0, 0]}
+        },
+        "F": {
+          "EDGE":   {"permutation": [9, 1, 2, 3, 8, 5, 6, 7, 0, 4, 10, 11], "orientation": [1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0]},
+          "CORNER": {"permutation": [3, 1, 2, 5, 0, 4, 6, 7], "orientation": [1, 0, 0, 2, 2, 1, 0, 0]},
+          "CENTER": {"permutation": [0, 1, 2, 3, 4, 5], "orientation": [0, 0, 1, 0, 0, 0]}
+        },
+        ...
       }
     }
 
