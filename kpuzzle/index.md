@@ -90,7 +90,7 @@ Then:
 Notes:
 
 - For most orbits of most puzzles, the sum of `.moves[moveName][orbitName].orientation` is divisible by `.orbits[orbitName].orientations`, even if partitioned by the orbits of `.moves[moveName][orbitName].permutation`. Programs may want to implement a convenient sanity check of this property for definition authors. However, note that some common definitions (e.g. 3x3x3 with centers) do *not* satisfy this, so programs MUST NOT implement this validation for arbitrary puzzles.
-- KSolve allows omitting some information, e.g. specifying the permutation for an orbit without an orientation (which indicates a default orientation of 0 for every piece). As of right now, a `KPuzzle Definition` is not permitted to leave out information like this.
+- KSolve allows omitting some information, such as leaving out an orbit or leaving out the permutation/orientation of an orbit to indicate that it is unchanged. As of right now, a `KPuzzle Definition` is not permitted to leave out information like this.
 
 ## TODO
 
