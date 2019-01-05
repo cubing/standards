@@ -71,20 +71,18 @@ For a definition to be valid, the following must hold:
 
 Let:
 
-- `orbitNames` be the keys of `.orbits`
-- `orbitName` be any member of `orbitNames`
-- `moveNames` be the keys of `.moves`
-- `moveName` be any member of `moveNames`
+- `orbitNames` be the keys of `.orbits`, and `orbitName` be any key.
+- `moveNames` be the keys of `.moves`, and `moveName` be any key.
 
 Then:
 
 - Names:
-  - `orbitName` must contain only letters and underscores `[A-Za-z_]+`
-  - `moveName` must contain only letters and underscores `[A-Za-z_]+` (TODO: Spec moves with layer prefixes, e.g. `2r`, `2-3r`)
-  - The set of keys of `.moves[moveName]` must exactly match `orbitNames`
+  - `orbitName` must contain only letters and underscores `[A-Za-z_]+`.
+  - `moveName` must contain only letters and underscores `[A-Za-z_]+` (TODO: Spec moves with layer prefixes, e.g. `2r`, `2-3r`).
+  - The set of keys of `.moves[moveName]` must exactly match `orbitNames`.
 - Permutations:
   - `.moves[moveName][orbitName].permutation` must be a permutation of the integers from `0` to `.orbits[orbitName].numPieces - 1` (i.e. each integer in the range appears exactly once).
-  - The length of `.moves[moveName][orbitName].orientation` must be exactly `.orbits[orbitName].numPieces`
+  - The length of `.moves[moveName][orbitName].orientation` must be exactly `.orbits[orbitName].numPieces`.
   - Each member of `.moves[moveName][orbitName].orientation` must be in the range from `0` to `.orbits[orbitName].orientations - 1` (inclusive).
 
 Notes:
