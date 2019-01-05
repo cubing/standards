@@ -15,5 +15,6 @@ Goals:
 - Geometry
   - face names
 - [Speffz](https://www.speedsolving.com/wiki/index.php/Speffz) cubie naming scheme.
+- Case names: PLL, OLL, CLS, etc.
 
 Feedback and contributions are welcome at [github.com/cubing/standards](https://github.com/cubing/standards)
