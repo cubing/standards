@@ -37,19 +37,19 @@ This allows programs to interoperate easily by following the standards in a stra
 The exact set of base moves depends on the puzzle. For cubes and "normal" twistypuzzles, we define `base-move` to be the following specific definition:
 
     bare-move-family  = x / y / z / m / e / s / M / E / S
-    slice-move-family = U / L / F / R / B / D
-    wide-move-family  = u / l / f / r / b / d / Uw / Lw / Fw / Rw / Bw / Dw
+    layer-move-family = U / L / F / R / B / D
+    range-move-family  = u / l / f / r / b / d / Uw / Lw / Fw / Rw / Bw / Dw
 
     positive-int = [1-9][0-9]*
     dash = "-"
 
     base-move =
         bare-move-family /
-        slice-move-family /
-        positive-int slice-move-family /
-        wide-move-family /
-        positive-int wide-move-family /
-        positive-int dash positive-int wide-move-family
+        layer-move-family /
+        positive-int layer-move-family /
+        range-move-family /
+        positive-int range-move-family /
+        positive-int dash positive-int range-move-family
 
 Other puzzles may define variants on this, but they must never contain whitespace or end in a digit.
 
