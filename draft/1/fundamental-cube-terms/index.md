@@ -119,7 +119,7 @@ Pieces are named by how many facelets they have:
 
 A location for a piece is named by which sides its facelets are on. These letters are assigned starting with the highest-priority facelet (see [section 1.1.5](#115-face-order)), then in counter-clockwise while looking at the piece from the outside of the puzzle.
 
-For "example", a cube has 8 corner locations: `UFR`, `URB`, `UBL`, `ULF`, `DRF`, `DFL`, `DLB`, `DBR`. At given moment, a corner location may have any of the 8 corners in it, in any of 3 orientations.
+For example, a cube has 8 corner locations: `UFR`, `URB`, `UBL`, `ULF`, `DRF`, `DFL`, `DLB`, `DBR`. At given moment, a corner location may have any of the 8 corners in it, in any of 3 orientations.
 
 Note: for applications that accept input from humans, it is recommended to allow the letters after the first one to be in any order. For example, `URF` should be considered to mean `UFR`.
 
