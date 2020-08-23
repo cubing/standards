@@ -1,8 +1,8 @@
-# Notation: SiGN and LGN (DRAFT)
+# Notations: SiGN and LGN (DRAFT)
 
 TODO: Create identifiers to distinguish the SiGN definition for cubes / normal puzzles / other puzzles.
 
-##  Recommendations
+## Recommendations
 
 Programs implementing a custom parser who wish to keep it as simple as possible should support reading and writing **Si**mple **G**eneral **N**otation (SiGN), defined at the end of the first section below as `sign-alg`.
 
@@ -54,6 +54,7 @@ The exact set of base moves depends on the puzzle. For cubes and "normal" twisty
 Other puzzles may define variants on this, but they must never contain whitespace or end in a digit.
 
 TODO:
+
 - SiGNw
 - Should we disallow `1r`?
 
@@ -75,7 +76,7 @@ The prime serves the purpose of a negative sign, indicating repetition of the in
 A `sign-alg` is a sequence of moves written out with spacing between them:
 
     single-space = " "
-    single-spaced-move-sequence = 
+    single-spaced-move-sequence =
         repeated-move  /
         repeated-move single-space single-spaced-move-sequence
     sign-alg = single-spaced-move-sequence
@@ -153,3 +154,22 @@ A general LGN algorithm is anything that is a valid `sequence`.
 
 - Standard serialization
 - Conversion from LGN to SiGN
+
+# Axis Puzzle Rotations
+
+There are 6 axis puzzle rotations: `x`, `x'`, `y`, `y'`, `z` `z'`,
+
+## Axis Puzzle Rotation Directions
+
+This is best defined using an example: `x` moves "like `R`" means that means that `x` rotates the entire puzzle using the same rotation transformation that the `R` layer moves during an `R` move. One can think of this as an `R` move "taking the entire puzzle with it".
+
+| Rotation | Moves Like |
+| -------- | ---------- |
+| `x`      | `R`        |
+| `y`      | `U`        |
+| `z`      | `F`        |
+| `x'`     | `L`        |
+| `y'`     | `D`        |
+| `z'`     | `B`        |
+
+Note that this corresponds to the axes defined in [standard 1.4.1](#TODO).

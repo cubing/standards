@@ -1,6 +1,16 @@
-# Lucas Garron's Cubing Standards Experimental Drafts
+# Cubing Standards
 
-Goals:
+Contribute [on GitHub](https://github.com/cubing/standards).
+
+## Drafts
+
+1. [Fundamental Cube Terms](./draft/1/fundamental-cube-terms/) (Draft)
+2. [Basic 3x3x3 Moves](./draft/2/basic-3x3x3-moves/) (Draft)
+3. [SiGN and LGN](./draft/3/sign-lgn-notation/) (Draft)
+4. [KPuzzle](./draft/4/kpuzzle/) (Draft)
+5. [Binary 3x3x3 Encoding](./draft/5/binary-3x3x3-encoding/) (Draft)
+
+## Future Ideas
 
 - Notation: [SiGN / LGN](./notation) (draft)
   - string alg format
