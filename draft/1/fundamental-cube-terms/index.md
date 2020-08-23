@@ -3,7 +3,7 @@
 Status: `DRAFT`  
 Version: 2018-09-06
 
-This standard is a defined terms for twisty puzzles. The definitions in this standard are focused around the [3x3x3 cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) in particular, although many of them can be used for other twisty puzzles.
+This standard defines terms for twisty puzzles. The definitions in this standard are focused around the [3x3x3 cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) in particular, although many of them can be used for other twisty puzzles.
 
 ## 1.1 Faces
 
