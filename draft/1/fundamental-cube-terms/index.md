@@ -28,7 +28,7 @@ The faces of a cube are named and lettered as follows:
 
 These names originate from David Singmaster, around 1981 [[1]](#ref1).
 
-Note: informally, "Top" is sometimes used as a colloquial synonym for "Up", and "Bottom" for down. However, the face letters always use the standard names (e.g. `U` for "Top", `D` for "Bottom").
+Note: informally, "Top" is sometimes used as a colloquial synonym for "Up", and "Bottom" for "Down". However, the face letters always use the standard names (e.g. `U` for "Top", `D` for "Bottom").
 
 ### 1.1.3 Facelet/Sticker
 
