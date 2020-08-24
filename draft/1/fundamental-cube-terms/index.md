@@ -34,7 +34,7 @@ Note: informally, "Top" is sometimes used as a colloquial synonym for "Up", and 
 
 The part of a face that belongs to a given piece is called a "facelet", or colloquially a "sticker".
 
-Example: the top 9 facelets/stickers of a 3x3x3 cube are called the "`U` face".
+Example: the `U` face consists of 9 facelets/stickers.
 
 ### 1.1.4 Face Layout
 
