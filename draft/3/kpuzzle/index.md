@@ -2,7 +2,8 @@
 
 Status: `DRAFT`  
 Version: 2018-09-06  
-Author: Lucas Garron
+Author: Lucas Garron  
+Prescriptive or descriptive: prescriptive (this standard attempts to describe new conventions)
 
 `KPuzzle` is a [JSON](https://json.org/) format for specifying [twisty puzzles](https://en.wikipedia.org/wiki/Combination_puzzle) based on how pieces are permuted and oriented. The format is adapted from [KSolve](https://github.com/cubing/ksolve), with a few notable differences in the details (see section [[4.3]()).
 

@@ -1,7 +1,8 @@
 # Cubing Standard #1: Fundamental Cube Terms
 
 Status: `DRAFT`  
-Version: 2018-09-06
+Version: 2018-09-06  
+Prescriptive or descriptive: descriptive (this standard attempts to describe existing conventions)
 
 This standard defines terms for twisty puzzles. The definitions in this standard are focused around the [3x3x3 cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) in particular, although many of them can be used for other twisty puzzles.
 

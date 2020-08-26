@@ -1,5 +1,8 @@
 # Notations: SiGN and LGN (DRAFT)
 
+Status: `DRAFT`  
+Prescriptive or descriptive: descriptive (this standard attempts to describe existing conventions)
+
 TODO: Create identifiers to distinguish the SiGN definition for cubes / normal puzzles / other puzzles.
 
 ## Recommendations

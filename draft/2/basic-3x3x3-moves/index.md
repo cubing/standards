@@ -1,6 +1,7 @@
 # Cubing Standard #2: Basic 3x3x3 Moves
 
-Status: `DRAFT`
+Status: `DRAFT`  
+Prescriptive or descriptive: descriptive (this standard attempts to describe existing conventions)
 
 This standard describes the basic moves for a 3x3x3 cube.
 
