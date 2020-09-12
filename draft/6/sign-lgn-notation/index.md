@@ -64,7 +64,6 @@ TODO:
 
 A `repeated-move` is a `base-move` with an optional suffix to indicate repetition.
 
-    # TODO: Is R0 allowed?
     prime = "'"
     repeated-move =
         base-move /
