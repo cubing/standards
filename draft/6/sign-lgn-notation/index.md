@@ -69,6 +69,7 @@ A `repeated-move` is a `base-move` with an optional suffix to indicate repetitio
     prime = "'"
     repeated-move =
         base-move /
+        base-move prime /
         base-move positive-int /
         base-move positive-int prime
 
@@ -78,11 +79,11 @@ The prime serves the purpose of a negative sign, indicating repetition of the in
 
 A `sign-alg` is a sequence of moves written out with spacing between them:
 
-    single-space = " "
-    single-spaced-move-sequence =
+    white-space = (" " / "\t" / "\n" / "\r")+
+    white-spaced-move-sequence =
         repeated-move  /
-        repeated-move single-space single-spaced-move-sequence
-    sign-alg = single-spaced-move-sequence
+        repeated-move white-space white-spaced-move-sequence
+    sign-alg = white-spaced-move-sequence
 
 Every `lgn-alg` can be expanded and normalized to a `sign-alg`.
 
@@ -104,6 +105,7 @@ A repeatable unit is a unit that can be repeated without being wrapped in a repe
 This is similar to `repeated-move` above. In fact, every `repeated-move` is a valid `repeated-unit`.
 
     repeated-unit = repeatable-unit /
+                    repeatable-unit prime /
                     repeatable-unit positive-int /
                     repeatable-unit positive-int prime
 
@@ -111,15 +113,9 @@ The same requirements as documented for `repeated-move` apply, except with units
 
 ## Sequence
 
-TODO: document when `white-space` can contain newlines.
-
-    white-space          = single-space
-    repeated-white-space = white-space /
-                           white-space repeated-white-space
-
     sequence = "" /
                repeated-unit /
-               repeated-unit repeated-white-space sequence
+               repeated-unit white-space sequence
 
 ## Group
 
@@ -139,8 +135,8 @@ The following identities hold:
 
 The following identities hold:
 
-- `[A: B] == A B (A)'`
-- `[A, B] == A B (A)' (B)'`
+- `[A: B] == A B A'`
+- `[A, B] == A B A' B'`
 
 ## Algorithm
 
