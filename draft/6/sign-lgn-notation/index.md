@@ -59,7 +59,6 @@ Other puzzles may define variants on this, but they must never contain whitespac
 TODO:
 
 - SiGNw
-- Should we disallow `1r`?
 
 ## Repeated Move
 
@@ -119,8 +118,7 @@ The same requirements as documented for `repeated-move` apply, except with units
 
 ## Group
 
-    optional-white-space = "" / repeated-white-space
-    embedded-sequence = optional-white-space sequence optional-white-space
+    embedded-sequence = white-space? sequence white-space?
     group = "(" embedded-sequence ")"
 
 The following identities hold:
