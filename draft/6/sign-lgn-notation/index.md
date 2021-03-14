@@ -77,11 +77,11 @@ The prime serves the purpose of a negative sign, indicating repetition of the in
 
 A `sign-alg` is a sequence of moves written out with spacing between them:
 
-    white-space = (" " / "\t" / "\n" / "\r")+
-    white-spaced-move-sequence =
+    single-space = " "
+    single-spaced-move-sequence =
         repeated-move  /
-        repeated-move white-space white-spaced-move-sequence
-    sign-alg = white-spaced-move-sequence
+        repeated-move single-space single-spaced-move-sequence
+    sign-alg = single-spaced-move-sequence
 
 Every `lgn-alg` can be expanded and normalized to a `sign-alg`.
 
@@ -111,13 +111,20 @@ The same requirements as documented for `repeated-move` apply, except with units
 
 ## Sequence
 
+TODO: document when `white-space` can contain newlines.
+
+    white-space          = single-space
+    repeated-white-space = white-space /
+                           white-space repeated-white-space
+
     sequence = "" /
                repeated-unit /
-               repeated-unit white-space sequence
+               repeated-unit repeated-white-space sequence
 
 ## Group
 
-    embedded-sequence = white-space? sequence white-space?
+    optional-white-space = "" / repeated-white-space
+    embedded-sequence = optional-white-space sequence optional-white-space
     group = "(" embedded-sequence ")"
 
 The following identities hold:
@@ -132,8 +139,8 @@ The following identities hold:
 
 The following identities hold:
 
-- `[A: B] == A B A'`
-- `[A, B] == A B A' B'`
+- `[A: B] == A B (A)'`
+- `[A, B] == A B (A)' (B)'`
 
 ## Algorithm
 
