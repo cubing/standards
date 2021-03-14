@@ -59,16 +59,15 @@ Other puzzles may define variants on this, but they must never contain whitespac
 TODO:
 
 - SiGNw
-- Should we disallow `1r`?
 
 ## Repeated Move
 
 A `repeated-move` is a `base-move` with an optional suffix to indicate repetition.
 
-    # TODO: Is R0 allowed?
     prime = "'"
     repeated-move =
         base-move /
+        base-move prime /
         base-move positive-int /
         base-move positive-int prime /
         base-move "0"
@@ -105,6 +104,7 @@ A repeatable unit is a unit that can be repeated without being wrapped in a repe
 This is similar to `repeated-move` above. In fact, every `repeated-move` is a valid `repeated-unit`.
 
     repeated-unit = repeatable-unit /
+                    repeatable-unit prime /
                     repeatable-unit positive-int /
                     repeatable-unit positive-int prime
 
