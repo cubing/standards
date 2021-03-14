@@ -120,7 +120,7 @@ Pieces are named by how many facelets they have:
 
 A location for a piece is named by which sides its facelets are on. These letters are assigned starting with the highest-priority facelet (see [section 1.1.5](#115-face-order)), then in counter-clockwise while looking at the piece from the outside of the puzzle.
 
-For example, a cube has 8 corner locations: `UFR`, `URB`, `UBL`, `ULF`, `DRF`, `DFL`, `DLB`, `DBR`. At given moment, a corner location may have any of the 8 corners in it, in any of 3 orientations.
+For example, a cube has 8 corner locations: `UFR`, `URB`, `UBL`, `ULF`, `DRF`, `DFL`, `DLB`, `DBR`. At any given moment, a corner location may have any of the 8 corners in it, in any of 3 orientations.
 
 Note: for applications that accept input from humans, it is recommended to allow the letters after the first one to be in any order. For example, `URF` should be considered to mean `UFR`.
 
@@ -140,7 +140,7 @@ The name of a piece is the name of its home location when the puzzle is solved i
 
 Example: UFR refers to the piece that is on the corner of the faces `U`, `F`, and `R` in standard orientation. This is the "white-green-red corner" in the standard color scheme. In this case, the "`UFR` piece" will always refer to the white-green-red corner _piece_, although any other corner may be in the `UFR` _location_.
 
-Example: a 3x3x3 cube has the following 26 pieces that affect the visible state of the puzzles:
+Example: a 3x3x3 cube has the following 26 pieces that affect the visible state of the puzzle:
 
 - 6 centers: `U`, `L`, `F`, `R`, `B`, `D`
 - 12 edges: `UF`, `UR`, `UB`, `UL`, `DF`, `DR`, `DB`, `DL`, `FR`, `FL`, `BR`, `BL`
@@ -150,7 +150,7 @@ Note: as with location names, it is recommended to allow the letters after the f
 
 ### 1.3.6 Layer
 
-An layer is the set of pieces separated by "cuts" on an axis where pieces may slide along each other. A 3x3x3 cube has 3 layers in along each of the 3 axes.
+An layer is the set of pieces separated by "cuts" on an axis where pieces may slide along each other. A 3x3x3 cube has 3 layers along each of the 3 axes.
 
 The outer layer on the furthest side of each axis is named using the same letter as the face it contains. (See [section 1.1.2](#112-face-namesletters))
 
@@ -187,7 +187,7 @@ Therefore, the face names are consistent with the perspective of a camera:
 - with the `+y` direction as up,
 - facing the origin (i.e. the center of the cube).
 
-This is a somewhat arbitrary convention, but it matches what is widely used by cubers to describe cube rotations. Applications are encouraged to use this coordinate system if possible.
+Cubers consistently use this convention to describe cube rotations. Applications are encouraged to use a matching coordinate system if possible.
 
 ## References
 
