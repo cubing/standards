@@ -70,7 +70,8 @@ A `repeated-move` is a `base-move` with an optional suffix to indicate repetitio
     repeated-move =
         base-move /
         base-move positive-int /
-        base-move positive-int prime
+        base-move positive-int prime /
+        base-move "0"
 
 The prime serves the purpose of a negative sign, indicating repetition of the inverse move.
 
