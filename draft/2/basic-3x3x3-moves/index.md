@@ -53,7 +53,7 @@ Note: In the 1980's, it was common to write `2` as a superscript `²`. A lot of 
 
 ## References
 
-1. <span id="ref1"></span>Notes on Rubik's Magic Cube, David Singmaster. Section 3. Notation.
+1. <span id="ref1"></span><a href="https://archive.org/details/SingmasterDavidNotesOnRubiksMagicCube/page/n7/mode/2up">Notes on Rubik's Magic Cube, David Singmaster. Section 3. Notation.</a>
 2. <span id="ref2"></span><https://www.worldcubeassociation.org/regulations/guidelines.html#E2c4+>
 
 ## TODO
