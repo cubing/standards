@@ -10,6 +10,7 @@ Contribute [on GitHub](https://github.com/cubing/standards).
 4. [3x3x3 State Representations](./draft/4/3x3x3-state-representations/) (Draft)
 5. [Binary 3x3x3 Encoding](./draft/5/binary-3x3x3-encoding/) (Draft)
 6. [SiGN and LGN](./draft/6/sign-lgn-notation/) (Draft)
+7. [4D Projection and Basic Hypercube Twists](./draft/7/4d-projection-and-basic-hypercube-twists/) (Draft)
 
 ## Future Ideas
 
