@@ -41,9 +41,15 @@ Example: the `U` face consists of 9 facelets/stickers.
 
 The standard face layout of a cube is in the following net:
 
-    | - | U | - | - |
-    | L | F | R | B |
-    | - | D | - | - |
+
+        ╭───╮
+        │ U │
+    ╭───┼───┼───┬───╮
+    │ L │ F │ R │ B │
+    ╰───┼───┼───┴───╯
+        │ D │
+        ╰───╯
+
 
 Note: this matches the convention used by, most cubers, and most cubing timers, and by TNoodle (the World Cube Association scramble program). It's also used in other standards like the face order for Speffz, a common convention for naming facelets for blindfolded solving. [[2]](#ref2)
 
