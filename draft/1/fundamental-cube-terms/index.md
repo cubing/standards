@@ -156,7 +156,7 @@ Note: as with location names, it is recommended to allow the letters after the f
 
 ### 1.3.6 Layer
 
-An layer is the set of pieces separated by "cuts" on an axis where pieces may slide along each other. A 3x3x3 cube has 3 layers along each of the 3 axes.
+A layer is the set of pieces separated by "cuts" on an axis where pieces may slide along each other. A 3x3x3 cube has 3 layers along each of the 3 axes.
 
 The outer layer on the furthest side of each axis is named using the same letter as the face it contains. (See [section 1.1.2](#112-face-namesletters))
 
