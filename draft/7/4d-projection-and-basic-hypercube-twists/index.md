@@ -3,7 +3,7 @@
 Status: `DRAFT`  
 Prescriptive or descriptive: descriptive (this standard attempts to describe existing conventions)
 
-This standard describes the basic moves for a NxNxNxN facet-turning hypercube.
+This standard describes the basic moves for a N×N×N×N facet-turning hypercube.
 
 ## 7.1 Polytope elements
 
@@ -126,7 +126,7 @@ Ridge twists may instead be specified using a facet letter followed by a lowerca
 
 For example, `Fz` is equivalent to `FO`.
 
-This notation is generally preferred for puzzle keybinds, for Melinda's 2x2x2x2, and for other physical puzzles. It should be avoided otherwise.
+This notation is generally preferred for puzzle keybinds, for Melinda's 2×2×2×2, and for other physical puzzles. It should be avoided otherwise.
 
 ## 7.6.1 Legacy xyz Notation
 
