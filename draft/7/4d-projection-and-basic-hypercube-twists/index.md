@@ -7,7 +7,7 @@ This standard describes the basic moves for a N×N×N×N facet-turning hypercube
 
 ## 7.1 Polytope elements
 
-When possible, pieces are named according to the rank of the element of the polytope they correspond to. Let _n_ be the rank of the puzzle.
+When possible, pieces are named according to the rank of the element of the polytope they correspond to. Let _d_ be the rank (i.e., dimension) of the puzzle.
 
 | Rank of element | Name   |
 | --------------- | ------ |
@@ -15,15 +15,15 @@ When possible, pieces are named according to the rank of the element of the poly
 | 1               | Edge   |
 | 2               | Face   |
 | 3               | Cell   |
-| _n_ - 3         | Peak   |
-| _n_ - 2         | Ridge  |
-| _n_ - 1         | Facet  |
+| _d_ - 3         | Peak   |
+| _d_ - 2         | Ridge  |
+| _d_ - 1         | Facet  |
 
 These terms are taken from [Polytope - Wikipedia](https://en.m.wikipedia.org/wiki/Polytope#Elements), with the exception of "corner" instead of "vertex."
 
 The terms "corner" and "edge" are preferred over "peak," "ridge," and "facet." For puzzles in 4 or more dimensions, the terms "peak", "ridge", and "facet" are preferred over "face" and "cell."
 
-For a 4D hypercube, the terms "corner," "edge," "ridge," and "facet" are preferred, although "cell" is also in common use.
+For a 4D hypercube, the terms "corner," "edge," "ridge," and "facet" are preferred, although "cell" is also in common use. In 4D specifically, "facet" and "cell" are interchangeable.
 
 ## 7.1 Facets
 
