@@ -126,6 +126,4 @@ For example, `Fz` is equivalent to `FO`.
 
 This notation is generally preferred for puzzle keybinds, for Melinda's 2×2×2×2, and for other physical puzzles. It should be avoided otherwise.
 
-## 7.6.1 Legacy xyz Notation
-
-Edge and corner moves may be represented using two `x`/`y`/`z` letters, where the last one may be followed by the digit `2` (which applies only to the last letter), but this is discouraged. It is preferred to group multiple ridge moves using parentheses. For example, `Ozx2` should instead be represented as `(Oz Ox2)` or simply `OUFR`.
+Moves using xyz notation can be grouped using parentheses. For example `OUFR` is equivalent to `(Oz Ox2)`.
