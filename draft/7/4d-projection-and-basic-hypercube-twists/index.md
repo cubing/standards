@@ -74,7 +74,6 @@ Examples:
 | `IR`      | `R` twists 90° from `F` to `U`                                           |
 | `OUR`     | `O` twists 180°, such that `U` and `R` swap and `F` and `B` swap         |
 | `DUFR`    | `D` twists 120° clockwise, such that `F` goes to `I` and `I` goes to `R` |
-|           |                                                                          |
 
 In software with mouse controls, these moves are typically executed by right-clicking on the described sticker. For example, `DUFR` is executed by right-clicking on the `D` sticker of the `DUFR` corner piece.
 
