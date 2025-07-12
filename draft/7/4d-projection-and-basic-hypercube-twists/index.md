@@ -40,7 +40,7 @@ There are 8 facets of a 4-dimensional hypercube, along with the color in standar
 | `O`          | Out        | positive W | Pink   |
 | `I`          | In         | negative W | Purple |
 
-Note: historically, `K` ("kata") has been used instead of `I`, and `A` ("ana") or `T` ("top") have been used instead of `I`. It is recommended to avoid these because it is confusing which one corresponds to which cell. Furthermore, `A` conflicts with 5D notation (`A` for "anterior") and `T` has been reappropriated for general F2L notation (`T` for general "top").
+Note: historically, `K` ("kata") has been used instead of `O`, and `A` ("ana") or `T` ("top") have been used instead of `I`. It is recommended to avoid these because it is confusing which one corresponds to which cell. Furthermore, `A` conflicts with 5D notation (`A` for "anterior").
 
 These also define the standard projection:
 
