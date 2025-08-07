@@ -74,6 +74,8 @@ A `repeated-move` is a `base-move` with an optional suffix to indicate repetitio
 
 The prime serves the purpose of a negative sign, indicating repetition of the inverse move.
 
+Note: although there is a [Unicode prime symbol](https://en.wikipedia.org/wiki/Prime_(symbol)), this symbol is not used and its use may cause compatibility issues. Cubing applications should assume use of the [apostrophe symbol](https://en.wikipedia.org/wiki/Apostrophe).
+
 ## SiGN Alg
 
 A `sign-alg` is a sequence of moves written out with spacing between them:

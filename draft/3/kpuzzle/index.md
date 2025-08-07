@@ -121,7 +121,7 @@ Then:
   - `moveName` must contain only letters and underscores `[A-Za-z_]+`, prefixed either by:
     - Nothing (e.g. `R` or `Rw`)
     - A single non-negative integer `[1-9][0-9]*` (e.g. `2R` or `7ur`)
-    - A range specified by two non-negative integer `([1-9][0-9]*)-([1-9][0-9]*)` where the first is ≤ the second (e.g. `2-4r`)
+    - A range specified by two non-negative integers `([1-9][0-9]*)-([1-9][0-9]*)` where the first is ≤ the second (e.g. `2-4r`)
   - The set of keys of `.moves[moveName]` must exactly match `orbitNames`.
 - Pattern data:
   - `pieces` must contain `.orbits[orbitIndex].numPieces` entries, and each must be a non-negative integer.
